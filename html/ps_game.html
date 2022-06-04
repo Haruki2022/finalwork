@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+<link href="../lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/ps_game.css">
+</head>
+<body>
+    <div class="g-index">
+    	<div class="m-logo">
+    		<div class="row">
+    			<div class="col-md-11"></div>
+    			<div class="col-md-1">
+    				<span>SONY</span>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="m-menu">
+    		<div class="row">
+    			<div class="col-md-8">
+    				<img src="../img/logo.png" alt="" onclick="home()">
+    				<li onclick="kw(0)">游戏</li>
+    				<li onclick="kw(1)">硬件</li>
+    				<li onclick="kw(2)">服务</li>
+    				<li onclick="kw(3)">最新信息</li>
+    				<li onclick="kw(4)">购物</li>
+    				<li onclick="kw(5)">支持</li>
+    			</div>
+    			<div class="col-md-4">
+                    <i class="fa fa-user fa-2x" style="display: none;margin-right: 40px;" onclick="user()"></i>
+                    <i class="fa fa-spinner fa-2x" style="display: none;margin-right: 40px;"></i>
+    				<button class="login">登录</button>
+    				<i class="fa fa-search fa-2x"></i>
+    			</div>
+    		</div>
+            <div class="m-kw kw1">
+                <div class="row">
+                    <div class="col-md-1"><img src="../img/ps5.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/ps4.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/psvr.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/PS Plus.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/PS Store.png" alt=""></div>
+                </div>
+            </div>
+            <div class="m-kw kw3">
+                <div class="row">
+                    <div class="col-md-1"><img src="../img/ps5.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/ps4.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/ps4p.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/psvr.png" alt=""></div>
+                </div>
+                <div class="row kw3row">
+                    <div class="col-md-8">
+                         <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>DualSense无线控制器</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>PULES 3D无线耳机组</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>PS5周边设备</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>PlayStation VR2</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>PS4配件</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-kw kw1">
+                <div class="row">
+                    <div class="col-md-1"><img src="../img/PS Plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="m-kw kw2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>微博</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>微信</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>腾讯视频</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>官方SNS</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-kw kw3">
+                <div class="row">
+                    <div class="col-md-1"><img src="../img/PS Store.png" alt=""></div>
+                </div>
+                <div class="row kw3row">
+                    <div class="col-md-3">
+                         <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>定期服务</span></div>
+                        <div class="bd"><i class="fa fa-circle" style="color: #17e"></i><span>销售门店</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-kw kw4">
+                <div class="row">
+                    <div class="col-md-1"><img src="../img/psn.png" alt=""></div>
+                    <div class="col-md-1"><img src="../img/zz.png" alt=""></div>
+                </div>
+            </div>
+    	</div>
+
+    	<div class="m-store">
+    		<div class="row">
+    			<div class="col-md-2">
+    				<img src="../img/store.png" alt="">
+    				<span>PlayStation</span>
+    				<span>.Store</span>
+    			</div>
+    			<div class="col-md-8">
+    				<span>最新</span>
+    				<span>定期服务</span>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="m-game">
+
+    		<div class="row">
+    			<div class="col-md-2">
+    				<span>15个项目</span>
+    			</div>
+    			<div class="col-md-8"></div>
+    			<div class="col-md-2">
+    			  <div class="m-sort" onclick="sort()">
+    				<i class="fa fa-sort-amount-desc" style="color: #0068bd;"></i>
+    				<span id="sort">按价格排列</span>
+    			  </div>
+    			</div>
+    		</div>
+    		
+    		<div class="m-game1 game">
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game0.png" alt="">
+    					<span>硬核机甲</span>
+    					<span>129.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game1.png" alt="">
+    					<span>怪物之家</span>
+    					<span>54.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game2.png" alt="">
+    					<span>元能失控</span>
+    					<span>99.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game3.png" alt="">
+    					<span>麻布仔大冒险</span>
+    					<span>354.29元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game4.png" alt="">
+    					<span>非常英雄</span>
+    					<span>79.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game5.png" alt="">
+    					<span>汐</span>
+    					<span>68.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game6.png" alt="">
+    					<span>人类拯救计划</span>
+    					<span>78.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game7.png" alt="">
+    					<span>爆破小超人</span>
+    					<span>36.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game8.png" alt="">
+    					<span>音姬</span>
+    					<span>68.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game9.png" alt="">
+    					<span>星际浪子</span>
+    					<span>39.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game10.png" alt="">
+    					<span>雨血前传:蜃楼</span>
+    					<span>66.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game11.png" alt="">
+    					<span>灵魂交织</span>
+    					<span>59.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game12.png" alt="">
+    					<span>雷曼:传奇</span>
+    					<span>31.80元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game13.png" alt="">
+    					<span>虚空之虫</span>
+    					<span>39.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game14.png" alt="">
+    					<span>永不孤单</span>
+    					<span>59.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+    		</div>
+    		<div class="m-game2 game">
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game12.png" alt="">
+    					<span>雷曼:传奇</span>
+    					<span>31.80元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game7.png" alt="">
+    					<span>爆破小超人</span>
+    					<span>36.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game9.png" alt="">
+    					<span>星际浪子</span>
+    					<span>39.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game13.png" alt="">
+    					<span>虚空之虫</span>
+    					<span>39.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game1.png" alt="">
+    					<span>怪物之家</span>
+    					<span>54.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game11.png" alt="">
+    					<span>灵魂交织</span>
+    					<span>59.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game14.png" alt="">
+    					<span>永不孤单</span>
+    					<span>59.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game10.png" alt="">
+    					<span>雨血前传:蜃楼</span>
+    					<span>66.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game5.png" alt="">
+    					<span>汐</span>
+    					<span>68.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game8.png" alt="">
+    					<span>音姬</span>
+    					<span>68.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+
+    			<div class="row">
+    			<div class="col-md-1"></div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game6.png" alt="">
+    					<span>人类拯救计划</span>
+    					<span>78.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game4.png" alt="">
+    					<span>非常英雄</span>
+    					<span>79.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game2.png" alt="">
+    					<span>元能失控</span>
+    					<span>99.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game0.png" alt="">
+    					<span>硬核机甲</span>
+    					<span>129.00元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-2">
+    				<div class="m-bd">
+    					<img src="../img/game3.png" alt="">
+    					<span>麻布仔大冒险</span>
+    					<span>354.29元</span>
+    				</div>
+    			</div>
+    			<div class="col-md-1"></div>
+    			</div>
+    		</div>
+    		<div class="g-hide">
+    			<img src="" alt="" class="m-hide">
+    			<div class="hide-span">
+    				<span>是否购买此游戏</span>
+    				<i class="fa fa-arrow-circle-down fa-3x"></i>
+    			  <div class="hide-bt">
+    				<button class="sure">购买</button>
+    				<button>取消</button>
+    			   </div>
+    			</div>
+    		</div>
+    		<div class="g-hide hide2">
+    			<img src="../img/game15.png" alt="" class="m-hide">
+    			<div class="hide-span">
+    				<span>成功购买此游戏</span>
+    			  <div class="hide-i">
+    				<i class="fa fa-check fa-2x"></i>
+    				<i class="fa fa-thumbs-o-up fa-2x"></i>
+    			  </div>
+    			  <div class="hide-bt hide2-bt">
+    				<button>确定</button>
+    			   </div>
+    			</div>
+    		</div>
+    	</div>
+
+        <div class="m-btn">
+          <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <button onclick="home()">
+                    <i class="fa fa-arrow-left"></i>
+                    <span>返回</span>
+                </button>
+            </div>
+          </div>
+        </div>
+
+    	<div class="m-bt">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="top">
+                        <img src="../img/logo2.png" alt="">
+                        <div>
+                            <i class="fa fa-globe" style="color: white;"></i>
+                            <span>地区：China</span>
+                        </div>
+                    </div>
+                    <div class="bt">
+                        <div>
+                            <i class="fa fa-info-circle" style="color: white;"></i>
+                            <span>2022-05-24</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-pencil-square" style="color: white;"></i>
+                            <span>2020212205317 许启文</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-pencil-square" style="color: white;"></i>
+                            <span>2020212205314 邹梓洋</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-paw" style="color: white;"></i>
+                            <span>WEB-PlayStation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span>支持</span>
+                            <span>隐私权政策</span>
+                            <span>条款及细则</span>
+                            <span>PlayStation Studios</span>
+                            <span>法律条款及资讯</span>
+                            <span>关于SIE</span>
+                            <span>PlayStation 与环境</span>
+                            <span>网络游戏行业防沉迷自律公约</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>服务条款及使用协议</span>
+                            <span>PlayStation Store退款政策</span>
+                            <span>健康警告</span>
+                            <span>关于分级及视听者限制</span>
+                            <span>知识产权信息</span>
+                            <span>Publisher&Developer Relations</span>
+                            <span>联系我们</span>
+                            <span>网站地图</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>微博</span>
+                            <span>微信</span>
+                            <span>哔哩哔哩</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../js/ps_game.js"></script>
+</body>
+</html>

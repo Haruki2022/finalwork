@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2022-06-01 09:11:54
+ * @version $Id$
+ */
+.row {
+	margin-right: 0;
+}
+.m-logo .row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	height: 36px;
+}
+
+.m-logo .row .col-md-2 span{
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	letter-spacing: 2px;
+	font-family:Tahoma;
+}
+
+.m-menu .row .col-md-2 div {
+	margin: 5px 0;
+	cursor: pointer;
+}
+.m-menu .row .col-md-2 .bd-menu {
+	padding: 10px 30px;
+}
+.m-menu .row .col-md-2 .bd-menu:nth-child(1){
+	background-color: #ccc;
+}
+.m-menu .row .col-md-2 .bd-menu:hover {
+	background-color: #ddd;
+}
+.m-menu .row .col-md-2 {
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 650px;
+	background-color: #fafafa;
+}
+
+.m-menu .row .col-md-6{
+	margin: 10px 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 20px;
+}
+.m-menu .row .col-md-6 div {
+	margin: 15px 0;
+
+}
+.m-menu .row .col-md-6 .mess span {
+	font-size: 22px;
+}
+.m-menu .row .col-md-6 .bd {
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.m-menu .row .col-md-6 .bd button{
+	background-color: white;
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 8px 14px;
+	font-size: 12px;
+}
+
+.m-btn i{
+	padding: 2px;
+}
+.m-btn span{
+	font-weight: bold;
+	font-size: 12px;
+	padding: 2px;
+	text-align: center;
+}
+.m-btn button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	border: 2px solid white;
+	outline: 1px solid black;
+	transition: 0.5s;
+	margin-left: 90px;
+}
+.m-btn button:hover {
+	opacity: 0.5;
+}
